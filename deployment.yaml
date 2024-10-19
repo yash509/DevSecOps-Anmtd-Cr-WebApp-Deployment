@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pe-wa-deployment
+  name: animated-car-deployment
 spec:
   replicas: 6  # Number of desired replicas
   selector:
     matchLabels:
-      app: pe-wa
+      app: animated-car
   template:
     metadata:
       labels:
-        app: pe-wa
+        app: animated-car
     spec:
       containers:
-      - name: pe-wa
-        image: yash5090/pe-wa:latest
+      - name: animated-car
+        image: yash5090/animated-car:latest
         ports:
         - containerPort: 5000
